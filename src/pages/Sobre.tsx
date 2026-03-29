@@ -1,14 +1,19 @@
 import Layout from "@/components/layout/Layout";
+import SobreHero from "@/components/sobre/SobreHero";
+import HistoriaSection from "@/components/sobre/HistoriaSection";
+import ExperienciaSection from "@/components/sobre/ExperienciaSection";
+import FormacaoSection from "@/components/sobre/FormacaoSection";
+import DiferenciaisSobreSection from "@/components/sobre/DiferenciaisSobreSection";
+import CtaFinalSection from "@/components/home/CtaFinalSection";
 
 const Sobre = () => (
   <Layout>
-    <section className="py-20 md:py-28">
-      <div className="container mx-auto px-6 text-center">
-        <span className="text-sm font-medium text-accent tracking-widest uppercase">Sobre</span>
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6">Conheça a Rafaella</h1>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Conteúdo completo em breve.</p>
-      </div>
-    </section>
+    <SobreHero />
+    <HistoriaSection />
+    <ExperienciaSection />
+    <FormacaoSection />
+    <DiferenciaisSobreSection />
+    <CtaFinalSection />
   </Layout>
 );
 
