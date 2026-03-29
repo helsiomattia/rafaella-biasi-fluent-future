@@ -8,9 +8,15 @@ import CtaFinalSection from "@/components/home/CtaFinalSection";
 const Metodologia = () => (
   <Layout>
     <MetodologiaHero />
-    <MetodologiaGrid />
-    <ComoFuncionaMetodologia />
-    <DiferenciaisMetodologia />
+
+    <section className="bg-[#f5f2ec] py-20 md:py-24">
+      <div className="space-y-20">
+        <MetodologiaGrid />
+        <ComoFuncionaMetodologia />
+        <DiferenciaisMetodologia />
+      </div>
+    </section>
+
     <CtaFinalSection />
   </Layout>
 );
