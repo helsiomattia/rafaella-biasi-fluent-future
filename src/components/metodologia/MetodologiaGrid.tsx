@@ -39,61 +39,63 @@ const methodologyCards = [
 ];
 
 const MetodologiaGrid = () => (
-  <section className="pb-20">
-    <div className="grid gap-6 md:grid-cols-2">
-      {methodologyCards.map((item, index) => {
-        const Icon = item.icon;
+  <section>
+    <div className="mx-auto max-w-6xl px-6">
+      <div className="grid gap-8 md:grid-cols-2">
+        {methodologyCards.map((item, index) => {
+          const Icon = item.icon;
 
-        return (
-          <motion.div
-            key={item.nome}
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.06 }}
-            className="rounded-[28px] border border-[#e6dfd6] bg-white p-7 shadow-sm"
-          >
-            <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#efe1c6] text-[#c37a17]">
-              <Icon className="h-6 w-6" />
-            </div>
-
-            <h3 className="mt-6 text-[32px] font-semibold leading-tight text-[#15233b]">
-              {item.nome}
-            </h3>
-
-            <p className="mt-4 text-base leading-8 text-slate-500">
-              {item.descricao}
-            </p>
-
-            <div className="mt-6 space-y-4">
-              <div className="rounded-2xl bg-[#f6f1e8] px-4 py-4">
-                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[#d08a21]">
-                  Para quem é
-                </p>
-                <p className="mt-2 text-sm leading-7 text-[#15233b]">
-                  {item.paraQuem}
-                </p>
-              </div>
-
-              <div className="rounded-2xl bg-[#f6f1e8] px-4 py-4">
-                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[#d08a21]">
-                  Benefício principal
-                </p>
-                <p className="mt-2 text-sm leading-7 text-[#15233b]">
-                  {item.beneficio}
-                </p>
-              </div>
-            </div>
-
-            <Button
-              asChild
-              className="mt-6 h-12 w-full rounded-2xl bg-[#e59a24] text-[#15233b] hover:bg-[#d88f1d]"
+          return (
+            <motion.div
+              key={item.nome}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.06 }}
+              className="rounded-[28px] border border-[#e8e0d4] bg-white p-7 shadow-[0_4px_18px_rgba(21,35,59,0.04)]"
             >
-              <Link to="/contato">Quero saber mais</Link>
-            </Button>
-          </motion.div>
-        );
-      })}
+              <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#efe1c6] text-[#c9851f]">
+                <Icon className="h-6 w-6" />
+              </div>
+
+              <h3 className="mt-6 text-[22px] font-semibold leading-tight text-[#15233b] md:text-[24px]">
+                {item.nome}
+              </h3>
+
+              <p className="mt-4 text-base leading-8 text-slate-500">
+                {item.descricao}
+              </p>
+
+              <div className="mt-6 space-y-4">
+                <div className="rounded-2xl bg-[#f6f1e8] px-4 py-4">
+                  <p className="text-xs font-medium uppercase tracking-[0.16em] text-[#d08a21]">
+                    Para quem é
+                  </p>
+                  <p className="mt-2 text-sm leading-7 text-[#15233b]">
+                    {item.paraQuem}
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-[#f6f1e8] px-4 py-4">
+                  <p className="text-xs font-medium uppercase tracking-[0.16em] text-[#d08a21]">
+                    Benefício principal
+                  </p>
+                  <p className="mt-2 text-sm leading-7 text-[#15233b]">
+                    {item.beneficio}
+                  </p>
+                </div>
+              </div>
+
+              <Button
+                asChild
+                className="mt-6 h-12 w-full rounded-2xl border-0 bg-[#e59a24] text-[#15233b] hover:bg-[#d98d1c]"
+              >
+                <Link to="/contato">Quero saber mais</Link>
+              </Button>
+            </motion.div>
+          );
+        })}
+      </div>
     </div>
   </section>
 );
