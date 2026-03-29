@@ -29,55 +29,61 @@ const steps = [
 ];
 
 const ComoFuncionaMetodologia = () => (
-  <section className="pb-20">
-    <div className="mx-auto max-w-3xl text-center">
-      <span className="inline-block text-sm font-medium uppercase tracking-[0.2em] text-[#d08a21]">
-        Como funciona
-      </span>
+  <section>
+    <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-3xl text-center">
+        <span className="inline-block text-sm font-medium uppercase tracking-[0.2em] text-[#d08a21]">
+          Como funciona
+        </span>
 
-      <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-[#15233b]">
-        Da clareza inicial à evolução contínua
-      </h2>
+        <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-[#15233b]">
+          Da clareza inicial à evolução contínua
+        </h2>
 
-      <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-500">
-        O método foi pensado para tornar o aprendizado mais claro, funcional e
-        conectado ao que o aluno realmente precisa viver com o inglês.
-      </p>
-    </div>
+        <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-500">
+          O método foi pensado para tornar o aprendizado mais claro, funcional e conectado ao que o aluno realmente precisa viver com o inglês.
+        </p>
+      </div>
 
-    <div className="mt-14 grid gap-6 md:grid-cols-2">
-      {steps.map((step, index) => {
-        const Icon = step.icon;
+      <div className="mt-14 grid gap-8 md:grid-cols-2">
+        {steps.map((step, index) => {
+          const Icon = step.icon;
 
-        return (
-          <motion.div
-            key={step.title}
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.06 }}
-            className="rounded-[28px] border border-[#e6dfd6] bg-white p-7 shadow-sm"
-          >
-            <div className="flex items-center gap-4">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#efe1c6] text-[#c37a17]">
-                <Icon className="h-5 w-5" />
+          return (
+            <motion.div
+              key={step.title}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.06 }}
+              className="rounded-[28px] border border-[#e8e0d4] bg-white p-7 shadow-[0_4px_18px_rgba(21,35,59,0.04)]"
+            >
+              <div className="flex items-center gap-4">
+                <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#efe1c6] text-[#c9851f]">
+                  <Icon className="h-5 w-5" />
+                </div>
               </div>
 
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#15233b] text-sm font-semibold text-white">
-                {index + 1}
+              <h3 className="mt-6 text-[22px] font-semibold leading-tight text-[#15233b] md:text-[24px]">
+                {step.title}
+              </h3>
+
+              <p className="mt-4 text-base leading-8 text-slate-500">
+                {step.description}
+              </p>
+
+              <div className="mt-6 rounded-2xl bg-[#f6f1e8] px-4 py-4">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[#d08a21]">
+                  Etapa {index + 1}
+                </p>
+                <p className="mt-2 text-sm leading-7 text-[#15233b]">
+                  Parte essencial de uma jornada mais leve, estratégica e personalizada.
+                </p>
               </div>
-            </div>
-
-            <h3 className="mt-6 text-2xl font-semibold leading-tight text-[#15233b]">
-              {step.title}
-            </h3>
-
-            <p className="mt-4 text-base leading-8 text-slate-500">
-              {step.description}
-            </p>
-          </motion.div>
-        );
-      })}
+            </motion.div>
+          );
+        })}
+      </div>
     </div>
   </section>
 );
