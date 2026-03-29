@@ -1,12 +1,16 @@
 import Layout from "@/components/layout/Layout";
+import ContatoHero from "@/components/contato/ContatoHero";
+import ContatoForm from "@/components/contato/ContatoForm";
+import ContatoInfo from "@/components/contato/ContatoInfo";
 
 const Contato = () => (
   <Layout>
-    <section className="py-20 md:py-28">
-      <div className="container mx-auto px-6 text-center">
-        <span className="text-sm font-medium text-accent tracking-widest uppercase">Contato</span>
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6">Entre em contato</h1>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Conteúdo completo em breve.</p>
+    <ContatoHero />
+
+    <section className="bg-[#f5f2ec] py-20 md:py-24">
+      <div className="mx-auto max-w-6xl px-6 grid gap-10 md:grid-cols-2">
+        <ContatoForm />
+        <ContatoInfo />
       </div>
     </section>
   </Layout>
