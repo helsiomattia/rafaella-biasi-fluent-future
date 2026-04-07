@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FOOTER_LINKS } from "@/data/constants";
 
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground py-16">
@@ -15,13 +16,7 @@ const Footer = () => (
         <div>
           <h4 className="font-display text-lg font-medium mb-4">Navegação</h4>
           <div className="flex flex-col gap-2">
-            {[
-              { label: "Home", path: "/" },
-              { label: "Sobre", path: "/sobre" },
-              { label: "Serviços", path: "/servicos" },
-              { label: "Metodologia", path: "/metodologia" },
-              { label: "Contato", path: "/contato" },
-            ].map((item) => (
+            {FOOTER_LINKS.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}

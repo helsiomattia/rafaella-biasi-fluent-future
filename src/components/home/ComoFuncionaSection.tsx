@@ -23,41 +23,66 @@ const steps = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 }
+  }
+};
+
 const ComoFuncionaSection = () => (
-  <section className="py-20 md:py-28 bg-secondary">
-    <div className="container mx-auto px-6">
+  <section className="py-24 md:py-32 bg-background relative overflow-hidden">
+    <div className="container mx-auto px-6 relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-16"
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-20"
       >
-        <span className="text-sm font-medium text-accent tracking-widest uppercase">Como funciona</span>
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-3">
+        <div className="inline-flex items-center justify-center gap-2 mb-4">
+          <span className="h-px w-6 bg-gold" />
+          <span className="text-xs font-bold text-gold tracking-widest uppercase">Como funciona</span>
+          <span className="h-px w-6 bg-gold" />
+        </div>
+        <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-2 tracking-tight">
           Sua jornada rumo à fluência
         </h2>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-100px" }}
+        className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6"
+      >
         {steps.map((step, i) => (
           <motion.div
             key={step.number}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.15 }}
-            className="relative"
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 80 } }
+            }}
+            whileHover={{ y: -5 }}
+            className="relative group transition-transform duration-500"
           >
-            <span className="font-display text-6xl font-bold text-accent/15">{step.number}</span>
-            <h3 className="font-display text-xl font-semibold text-foreground mt-2 mb-3">{step.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+            <div className="mb-4 relative inline-block">
+              <span className="font-display text-7xl font-bold text-gold/10 group-hover:text-gold/20 transition-colors duration-500">{step.number}</span>
+              <div className="absolute bottom-4 left-0 w-full h-px bg-gradient-to-r from-gold/50 to-transparent" />
+            </div>
+            
+            <h3 className="font-display text-xl font-semibold text-foreground mb-3">{step.title}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed font-light">{step.description}</p>
+            
+            {/* Conection line - only visible on desktop */}
             {i < steps.length - 1 && (
-              <div className="hidden lg:block absolute top-8 right-0 translate-x-1/2 w-12 h-px bg-border" />
+              <div className="hidden lg:block absolute top-12 right-0 translate-x-1/2 w-[calc(100%-4rem)] h-[1px] bg-gradient-to-r from-gold/30 to-border border-dashed border-t-[1px] !bg-none" style={{ background: 'none' }} />
             )}
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   </section>
 );

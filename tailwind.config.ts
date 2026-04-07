@@ -82,6 +82,12 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        'premium': '0 20px 40px -15px rgba(0,0,0,0.05)',
+        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.03)',
+        'inner-glow': 'inset 0 0 0 1px rgba(255,255,255,0.4), 0 4px 12px rgba(0,0,0,0.05)',
+        'hero': '0 25px 50px -12px rgba(180, 150, 80, 0.15)',
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

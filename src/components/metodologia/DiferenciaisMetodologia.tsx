@@ -14,11 +14,11 @@ const DiferenciaisMetodologia = () => (
   <section>
     <div className="mx-auto max-w-6xl px-6">
       <div className="mx-auto max-w-3xl text-center">
-        <span className="inline-block text-sm font-medium uppercase tracking-[0.2em] text-[#d08a21]">
+        <span className="inline-block text-sm font-medium uppercase tracking-[0.2em] text-gold">
           Diferenciais
         </span>
 
-        <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-[#15233b]">
+        <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-foreground">
           O que torna essa metodologia mais humana e eficaz
         </h2>
 
@@ -35,11 +35,11 @@ const DiferenciaisMetodologia = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: index * 0.04 }}
-            className="rounded-[24px] border border-[#e8e0d4] bg-white px-5 py-5 shadow-[0_4px_18px_rgba(21,35,59,0.04)]"
+            className="rounded-[24px] border border-border bg-card px-5 py-5 shadow-[0_4px_18px_rgba(21,35,59,0.04)]"
           >
             <div className="flex items-start gap-3">
-              <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#d08a21]" />
-              <p className="text-base leading-8 text-[#15233b]">{item}</p>
+              <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+              <p className="text-base leading-8 text-foreground">{item}</p>
             </div>
           </motion.div>
         ))}

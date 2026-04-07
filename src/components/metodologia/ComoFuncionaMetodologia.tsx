@@ -32,11 +32,11 @@ const ComoFuncionaMetodologia = () => (
   <section>
     <div className="mx-auto max-w-6xl px-6">
       <div className="mx-auto max-w-3xl text-center">
-        <span className="inline-block text-sm font-medium uppercase tracking-[0.2em] text-[#d08a21]">
+        <span className="inline-block text-sm font-medium uppercase tracking-[0.2em] text-gold">
           Como funciona
         </span>
 
-        <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-[#15233b]">
+        <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-foreground">
           Da clareza inicial à evolução contínua
         </h2>
 
@@ -56,15 +56,15 @@ const ComoFuncionaMetodologia = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.06 }}
-              className="rounded-[28px] border border-[#e8e0d4] bg-white p-7 shadow-[0_4px_18px_rgba(21,35,59,0.04)]"
+              className="rounded-[28px] border border-border bg-card p-7 shadow-[0_4px_18px_rgba(21,35,59,0.04)]"
             >
               <div className="flex items-center gap-4">
-                <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#efe1c6] text-[#c9851f]">
+                <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-gold/20 text-gold">
                   <Icon className="h-5 w-5" />
                 </div>
               </div>
 
-              <h3 className="mt-6 text-[22px] font-semibold leading-tight text-[#15233b] md:text-[24px]">
+              <h3 className="mt-6 text-[22px] font-semibold leading-tight text-foreground md:text-[24px]">
                 {step.title}
               </h3>
 
@@ -72,11 +72,11 @@ const ComoFuncionaMetodologia = () => (
                 {step.description}
               </p>
 
-              <div className="mt-6 rounded-2xl bg-[#f6f1e8] px-4 py-4">
-                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[#d08a21]">
+              <div className="mt-6 rounded-2xl bg-secondary px-4 py-4">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-gold">
                   Etapa {index + 1}
                 </p>
-                <p className="mt-2 text-sm leading-7 text-[#15233b]">
+                <p className="mt-2 text-sm leading-7 text-foreground">
                   Parte essencial de uma jornada mais leve, estratégica e personalizada.
                 </p>
               </div>

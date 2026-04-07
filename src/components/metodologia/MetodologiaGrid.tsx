@@ -52,13 +52,13 @@ const MetodologiaGrid = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.06 }}
-              className="rounded-[28px] border border-[#e8e0d4] bg-white p-7 shadow-[0_4px_18px_rgba(21,35,59,0.04)]"
+              className="rounded-[28px] border border-border bg-card p-7 shadow-[0_4px_18px_rgba(21,35,59,0.04)]"
             >
-              <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#efe1c6] text-[#c9851f]">
+              <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-gold/20 text-gold">
                 <Icon className="h-6 w-6" />
               </div>
 
-              <h3 className="mt-6 text-[22px] font-semibold leading-tight text-[#15233b] md:text-[24px]">
+              <h3 className="mt-6 text-[22px] font-semibold leading-tight text-foreground md:text-[24px]">
                 {item.nome}
               </h3>
 
@@ -67,20 +67,20 @@ const MetodologiaGrid = () => (
               </p>
 
               <div className="mt-6 space-y-4">
-                <div className="rounded-2xl bg-[#f6f1e8] px-4 py-4">
-                  <p className="text-xs font-medium uppercase tracking-[0.16em] text-[#d08a21]">
+                <div className="rounded-2xl bg-secondary px-4 py-4">
+                  <p className="text-xs font-medium uppercase tracking-[0.16em] text-gold">
                     Para quem é
                   </p>
-                  <p className="mt-2 text-sm leading-7 text-[#15233b]">
+                  <p className="mt-2 text-sm leading-7 text-foreground">
                     {item.paraQuem}
                   </p>
                 </div>
 
-                <div className="rounded-2xl bg-[#f6f1e8] px-4 py-4">
-                  <p className="text-xs font-medium uppercase tracking-[0.16em] text-[#d08a21]">
+                <div className="rounded-2xl bg-secondary px-4 py-4">
+                  <p className="text-xs font-medium uppercase tracking-[0.16em] text-gold">
                     Benefício principal
                   </p>
-                  <p className="mt-2 text-sm leading-7 text-[#15233b]">
+                  <p className="mt-2 text-sm leading-7 text-foreground">
                     {item.beneficio}
                   </p>
                 </div>
@@ -88,7 +88,7 @@ const MetodologiaGrid = () => (
 
               <Button
                 asChild
-                className="mt-6 h-12 w-full rounded-2xl border-0 bg-[#e59a24] text-[#15233b] hover:bg-[#d98d1c]"
+                className="mt-6 h-12 w-full rounded-2xl border-0 bg-gold text-charcoal hover:brightness-105"
               >
                 <Link to="/contato">Quero saber mais</Link>
               </Button>

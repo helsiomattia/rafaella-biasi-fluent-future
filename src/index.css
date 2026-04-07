@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,44 +6,43 @@
 
 @layer base {
   :root {
-    --background: 40 33% 97%;
-    --foreground: 220 20% 15%;
+    --background: 40 30% 98%;
+    --foreground: 220 25% 12%;
 
-    --card: 40 25% 95%;
-    --card-foreground: 220 20% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 12%;
 
-    --popover: 40 33% 97%;
-    --popover-foreground: 220 20% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 12%;
 
-    --primary: 220 20% 15%;
-    --primary-foreground: 40 33% 97%;
+    --primary: 220 25% 12%;
+    --primary-foreground: 40 30% 98%;
 
-    --secondary: 40 20% 92%;
-    --secondary-foreground: 220 20% 15%;
+    --secondary: 40 20% 95%;
+    --secondary-foreground: 220 25% 12%;
 
-    --muted: 40 15% 93%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 40 10% 95%;
+    --muted-foreground: 220 15% 40%;
 
-    --accent: 35 80% 55%;
-    --accent-foreground: 220 20% 10%;
+    --accent: 38 80% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 35 20% 88%;
-    --input: 35 20% 88%;
-    --ring: 35 80% 55%;
+    --border: 35 15% 90%;
+    --input: 35 15% 90%;
+    --ring: 38 80% 50%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom premium tokens */
-    --warm: 30 40% 90%;
-    --warm-foreground: 220 20% 20%;
-    --gold: 35 80% 55%;
-    --gold-light: 38 60% 85%;
-    --gold-dark: 30 70% 40%;
-    --cream: 40 33% 97%;
-    --charcoal: 220 20% 15%;
+    --warm: 35 40% 94%;
+    --warm-foreground: 220 25% 15%;
+    --gold: 38 80% 50%;
+    --gold-light: 40 65% 80%;
+    --gold-dark: 32 75% 35%;
+    --cream: 40 30% 98%;
+    --charcoal: 220 25% 12%;
     --sage: 150 15% 55%;
     --sage-light: 150 15% 92%;
 
@@ -59,6 +58,50 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  .dark {
+    --background: 222 47% 7%;
+    --foreground: 40 30% 98%;
+
+    --card: 222 47% 10%;
+    --card-foreground: 40 30% 98%;
+
+    --popover: 222 47% 10%;
+    --popover-foreground: 40 30% 98%;
+
+    --primary: 40 30% 98%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 40 30% 98%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 38 80% 50%;
+    --accent-foreground: 40 30% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 40 30% 98%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 38 80% 50%;
+
+    --warm: 217 32% 12%;
+    --warm-foreground: 40 30% 98%;
+    --cream: 222 47% 8%;
+    --charcoal: 222 47% 4%;
+
+    --sidebar-background: 222 47% 9%;
+    --sidebar-foreground: 240 5.3% 90%;
+    --sidebar-primary: 240 5.9% 90%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 217 32% 15%;
+    --sidebar-accent-foreground: 240 5.9% 90%;
+    --sidebar-border: 217 32% 17%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
 }
 
 @layer base {
@@ -67,23 +110,26 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply bg-background text-foreground font-body antialiased selection:bg-gold-light/40 selection:text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
+    @apply font-display tracking-tight text-foreground;
   }
 }
 
 @layer utilities {
-  .font-display {
-    font-family: var(--font-display);
-  }
-  .font-body {
-    font-family: var(--font-body);
-  }
   .text-gradient-gold {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-dark)));
+    background-image: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
+  }
+  
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-glass;
+  }
+
+  .premium-shadow {
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.03);
   }
 }

@@ -9,7 +9,7 @@ const Metodologia = () => (
   <Layout>
     <MetodologiaHero />
 
-    <section className="bg-[#f5f2ec] py-20 md:py-24">
+    <section className="bg-secondary py-20 md:py-24">
       <div className="space-y-20">
         <MetodologiaGrid />
         <ComoFuncionaMetodologia />

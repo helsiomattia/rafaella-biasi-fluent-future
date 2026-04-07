@@ -24,8 +24,8 @@ Objetivo: ${form.objetivo}`;
   };
 
   return (
-    <div className="rounded-[28px] border border-[#e8e0d4] bg-white p-8 shadow-sm">
-      <h3 className="text-2xl font-semibold text-[#15233b]">
+    <div className="rounded-[28px] border border-border bg-card p-8 shadow-sm">
+      <h3 className="text-2xl font-semibold text-foreground">
         Me envie uma mensagem
       </h3>
 
@@ -41,7 +41,7 @@ Objetivo: ${form.objetivo}`;
           value={form.nome}
           onChange={handleChange}
           required
-          className="w-full rounded-xl border border-[#e6dfd6] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#d08a21]"
+          className="w-full rounded-xl border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold"
         />
 
         <input
@@ -51,7 +51,7 @@ Objetivo: ${form.objetivo}`;
           value={form.email}
           onChange={handleChange}
           required
-          className="w-full rounded-xl border border-[#e6dfd6] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#d08a21]"
+          className="w-full rounded-xl border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold"
         />
 
         <textarea
@@ -61,12 +61,12 @@ Objetivo: ${form.objetivo}`;
           onChange={handleChange}
           required
           rows={4}
-          className="w-full rounded-xl border border-[#e6dfd6] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#d08a21]"
+          className="w-full rounded-xl border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold"
         />
 
         <Button
           type="submit"
-          className="w-full h-12 rounded-xl bg-[#e59a24] text-[#15233b] hover:bg-[#d98d1c]"
+          className="w-full h-12 rounded-xl bg-gold text-charcoal hover:brightness-105"
         >
           Falar no WhatsApp
         </Button>
