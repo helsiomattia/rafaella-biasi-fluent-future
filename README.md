@@ -158,7 +158,7 @@ O projeto possui pipeline automatizado utilizando **GitHub Actions**, responsáv
 Desenvolvido por **Helsio Mattia**
 
 * GitHub: https://github.com/helsiomattia
-* LinkedIn: (adicione aqui se quiser)
+* LinkedIn: https://www.linkedin.com/in/helsiomattia/
 
 ---
 
