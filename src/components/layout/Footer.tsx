@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="container mx-auto px-6">
       <div className="grid md:grid-cols-3 gap-12">
         <div>
-          <h3 className="font-display text-2xl font-semibold mb-4">
+          <h3 className="font-display text-2xl font-semibold mb-4 text-primary-foreground">
             Rafaella <span className="text-accent">Biasi</span>
           </h3>
           <p className="text-primary-foreground/70 text-sm leading-relaxed">
@@ -14,7 +14,7 @@ const Footer = () => (
           </p>
         </div>
         <div>
-          <h4 className="font-display text-lg font-medium mb-4">Navegação</h4>
+          <h4 className="font-display text-lg font-medium mb-4 text-primary-foreground">Navegação</h4>
           <div className="flex flex-col gap-2">
             {FOOTER_LINKS.map((item) => (
               <Link
@@ -28,7 +28,7 @@ const Footer = () => (
           </div>
         </div>
         <div>
-          <h4 className="font-display text-lg font-medium mb-4">Contato</h4>
+          <h4 className="font-display text-lg font-medium mb-4 text-primary-foreground">Contato</h4>
           <p className="text-sm text-primary-foreground/60">Aulas 100% online</p>
           <p className="text-sm text-primary-foreground/60 mt-1">Para alunos de todo o Brasil e do mundo</p>
         </div>

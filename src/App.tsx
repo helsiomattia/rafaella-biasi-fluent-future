@@ -5,16 +5,19 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
-import Index from "./pages/Index";
-import Sobre from "./pages/Sobre";
-import Servicos from "./pages/Servicos";
-import Metodologia from "./pages/Metodologia";
-import Contato from "./pages/Contato";
-import Hub from "./pages/Hub";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import NotFound from "./pages/NotFound";
-import Admin from "./pages/Admin";
+import { Suspense, lazy } from "react";
+import LoadingFallback from "@/components/ui/LoadingFallback";
+
+const Index = lazy(() => import("./pages/Index"));
+const AProfessora = lazy(() => import("./pages/AProfessora"));
+const OPrograma = lazy(() => import("./pages/OPrograma"));
+const Contato = lazy(() => import("./pages/Contato"));
+const Hub = lazy(() => import("./pages/Hub"));
+const HubPost = lazy(() => import("./pages/HubPost"));
+const Login = lazy(() => import("./pages/Login"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Admin = lazy(() => import("./pages/Admin"));
 
 const queryClient = new QueryClient();
 
@@ -25,22 +28,24 @@ const App = () => (
         <Toaster />
         <Sonner />
         <HashRouter>
-          <Routes>
-            {/* Public Routes */}
-            <Route path="/" element={<Index />} />
-            <Route path="/sobre" element={<Sobre />} />
-            <Route path="/servicos" element={<Servicos />} />
-            <Route path="/metodologia" element={<Metodologia />} />
-            <Route path="/hub" element={<Hub />} />
-            <Route path="/contato" element={<Contato />} />
-            <Route path="/login" element={<Login />} />
+          <Suspense fallback={<LoadingFallback />}>
+            <Routes>
+              {/* Public Routes */}
+              <Route path="/" element={<Index />} />
+              <Route path="/a-professora" element={<AProfessora />} />
+              <Route path="/programa" element={<OPrograma />} />
+              <Route path="/hub" element={<Hub />} />
+              <Route path="/hub/:slug" element={<HubPost />} />
+              <Route path="/contato" element={<Contato />} />
+              <Route path="/login" element={<Login />} />
 
-            {/* Protected Routes */}
-            <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-            <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+              {/* Protected Routes */}
+              <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+              <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
 
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </HashRouter>
       </TooltipProvider>
     </QueryClientProvider>

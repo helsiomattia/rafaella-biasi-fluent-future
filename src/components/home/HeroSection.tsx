@@ -68,8 +68,8 @@ const HeroSection = () => (
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-            <Button variant="ghost" size="lg" className="rounded-full px-8 hover:bg-gold/10 hover:text-gold-dark text-base" asChild>
-              <Link to="/metodologia">Conheça o método</Link>
+            <Button variant="outline" size="lg" className="w-full sm:w-auto text-base hover:bg-gold-light/20" asChild>
+              <Link to="/programa">Conheça o método</Link>
             </Button>
           </motion.div>
         </motion.div>
@@ -92,6 +92,8 @@ const HeroSection = () => (
                 alt="Rafaella Biasi - Professora de Inglês"
                 width={1024}
                 height={1024}
+                fetchPriority="high"
+                loading="eager"
                 className="w-full h-auto object-cover aspect-[4/5] md:aspect-square lg:aspect-[4/5] hover:scale-105 transition-transform duration-1000 ease-out"
               />
             </div>

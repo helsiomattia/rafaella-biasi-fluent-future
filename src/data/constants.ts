@@ -11,18 +11,16 @@ import type {
 // ── Site Navigation ─────────────────────────────────────────
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", path: "/" },
-  { label: "Sobre", path: "/sobre" },
-  { label: "Serviços", path: "/servicos" },
-  { label: "Metodologia", path: "/metodologia" },
+  { label: "A Professora", path: "/a-professora" },
+  { label: "O Programa", path: "/programa" },
   { label: "Fluent Hub", path: "/hub" },
   { label: "Contato", path: "/contato" },
 ];
 
 export const FOOTER_LINKS: NavItem[] = [
   { label: "Home", path: "/" },
-  { label: "Sobre", path: "/sobre" },
-  { label: "Serviços", path: "/servicos" },
-  { label: "Metodologia", path: "/metodologia" },
+  { label: "A Professora", path: "/a-professora" },
+  { label: "O Programa", path: "/programa" },
   { label: "Contato", path: "/contato" },
 ];
 

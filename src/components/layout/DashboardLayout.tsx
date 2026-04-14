@@ -13,7 +13,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-background flex font-body">
+    <div className="h-screen overflow-hidden bg-background flex font-body">
       {/* Sidebar Desktop */}
       <aside className="hidden lg:flex flex-col w-72 bg-card text-foreground border-r border-border shadow-sm z-20">
         <div className="p-8 border-b border-secondary">
@@ -33,7 +33,9 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         
         <nav className="flex-1 p-6 space-y-2">
           {DASHBOARD_LINKS.map((link) => {
-            const isActive = location.pathname === link.path;
+            const isActive = link.path.startsWith('#') 
+              ? location.hash === link.path 
+              : location.pathname === link.path && (!location.hash || location.hash === '');
             const Icon = link.icon;
             return (
               <Link
@@ -100,7 +102,9 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
                 </div>
                 <nav className="flex-1 p-6 space-y-2">
                   {DASHBOARD_LINKS.map((link) => {
-                    const isActive = location.pathname === link.path;
+                    const isActive = link.path.startsWith('#') 
+                      ? location.hash === link.path 
+                      : location.pathname === link.path && (!location.hash || location.hash === '');
                     const Icon = link.icon;
                     return (
                       <Link

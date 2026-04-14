@@ -16,17 +16,15 @@ const MetodologiaHero = () => (
           <div className="mb-6 flex items-center gap-3">
             <span className="h-px w-8 bg-gold-dark" />
             <span className="inline-block text-xs md:text-sm font-semibold text-gold-dark tracking-[0.2em] uppercase">
-              Metodologia
+              O Programa
             </span>
           </div>
           <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-6 tracking-tight">
-            Um método pensado para desenvolver inglês com mais{" "}
-            <span className="text-gradient-gold inline-block pb-2 mt-2">clareza, confiança e foco</span>
+            O inglês certo para o seu momento, com um método{" "}
+            <span className="text-gradient-gold inline-block pb-2 mt-2">focado em você</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg font-light">
-            A proposta é criar uma experiência de aprendizagem completamente personalizada, prática
-            e alinhada aos objetivos reais de cada aluno, respeitando seu ritmo e
-            favorecendo uma evolução consistente.
+            Aulas desenhadas para a sua realidade. Minha proposta é criar uma jornada de aprendizagem personalizada, unindo estratégias eficazes aos seus objetivos reais de comunicação.
           </p>
         </motion.div>
 

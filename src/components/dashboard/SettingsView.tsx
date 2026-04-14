@@ -34,6 +34,10 @@ const SettingsView = () => (
                  <input type="text" defaultValue="Aluno Fluente" className="w-full h-14 rounded-2xl border border-input bg-transparent px-4 text-base focus-visible:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all" />
                </div>
                <div className="space-y-2">
+                 <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Email</label>
+                 <input type="email" defaultValue="aluno@fluency.com" className="w-full h-14 rounded-2xl border border-input bg-transparent px-4 text-base focus-visible:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all" />
+               </div>
+               <div className="space-y-2 md:col-span-2">
                  <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Whatsapp</label>
                  <input type="text" defaultValue="(11) 99999-9999" className="w-full h-14 rounded-2xl border border-input bg-transparent px-4 text-base focus-visible:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all" />
                </div>
